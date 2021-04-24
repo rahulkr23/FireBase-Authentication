@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import fire from "./config/fire";
+import firebase from "./config/firebase";
 
 class Login extends Component {
     constructor(props) 
@@ -16,7 +16,7 @@ class Login extends Component {
 
     login(e) {
         e.preventDefault();
-        fire.auth().signInWithEmailAndPassword(this.state.email,this.state.password).then((u) => {
+        firebase.auth().signInWithEmailAndPassword(this.state.email,this.state.password).then((u) => {
             console.log(u)
         }).catch((err) => {
             console.log(err);
@@ -35,7 +35,7 @@ class Login extends Component {
     }
     signup(e){
         e.preventDefault();
-        fire.auth().createUserWithEmailAndPassword(this.state.email,this.state.password).then((u)=>{
+        firebase.auth().createUserWithEmailAndPassword(this.state.email,this.state.password).then((u)=>{
          }) .catch((err)=>{
              console.log(err);
 
