@@ -47,7 +47,7 @@ export class App extends Component {
     return (
       <div className="App">
         {this.state.user ? (<Home />) : (<Login />)}
-        <label></label>
+        <label> </label>
         <button onClick={this.handleClick}>Click Here</button>
 
       </div>
